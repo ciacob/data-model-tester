@@ -1,0 +1,19 @@
+{
+  "config": "air",
+  "type": "app",
+  "mainClass": "Main",
+  "application": "d:\\_DEV_\\github\\actionscript\\data-model-tester\\src\\Main-app.xml",
+  "copySourcePathAssets": true,
+  "compilerOptions": {
+    "debug": true,
+    "library-path": [
+      "lib",
+      "d:\\_DEV_\\github\\actionscript\\data-model-library\\bin",
+      "d:\\_DEV_\\github\\actionscript\\utils-library\\bin"
+    ],
+    "output": "bin/Main.swf",
+    "source-path": [
+      "src"
+    ]
+  }
+}

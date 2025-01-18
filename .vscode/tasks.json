@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MASCOT: compile debug",
+      "type": "actionscript",
+      "debug": true,
+      "asconfig": "asconfig.json",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "MASCOT: compile release",
+      "type": "actionscript",
+      "debug": false,
+      "asconfig": "asconfig.json",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
