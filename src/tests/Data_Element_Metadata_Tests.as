@@ -63,5 +63,36 @@ package tests {
             Assert.assertNull("Should not allow setting read-only metadata", element.getMetadata(DataKeys.CHILDREN));
         }
 
+        // Test 5: Intrinsic Metadata Update
+        [Test]
+        public function test__intrinsic_metadata_update():void {
+            // Directly manipulate _children (bypassing addDataChild)
+            var child:DataElement = new DataElement();
+            var grandchild:DataElement = new DataElement();
+            element._children.push(child); // Manually add child
+            child.setParent(element);
+            child._children.push(grandchild); // Manually add grandchild
+            grandchild.setParent(child);
+
+            // At this point, metadata is likely incorrect or empty
+            Assert.assertNull("Child's route should be null initially", child.route);
+            Assert.assertNull("Grandchild's route should be null initially", grandchild.route);
+            Assert.assertEquals("Child's level should be -1 initially", -1, child.level);
+            Assert.assertEquals("Grandchild's level should be -1 initially", -1, grandchild.level);
+
+            // Call resetIntrinsicMeta to fix the metadata
+            element.resetIntrinsicMeta();
+
+            // Verify metadata after reset
+            Assert.assertEquals("Root element's route should be '-1'", "-1", element.route);
+            Assert.assertEquals("Root element's level should be 0", 0, element.level);
+
+            Assert.assertEquals("Child's route should be '-1_0'", "-1_0", child.route);
+            Assert.assertEquals("Child's level should be 1", 1, child.level);
+
+            Assert.assertEquals("Grandchild's route should be '-1_0_0'", "-1_0_0", grandchild.route);
+            Assert.assertEquals("Grandchild's level should be 2", 2, grandchild.level);
+        }
+
     }
 }
