@@ -1,0 +1,39 @@
+get level
+get index
+get parentFlatElementsMap
+getElementByRoute
+hasContentKey
+toString
+enforceIndex
+reorderSiblings
+setIntrinsicMetadata
+setParent
+[COVERED] get numDataChildren
+[COVERED] get canHaveChildren
+[COVERED] get dataParent
+[COVERED] get route
+[COVERED] get root
+[COVERED] DataElement (constructor)
+[COVERED] addDataChild
+[COVERED] addDataChildAt
+[COVERED] clone
+[COVERED] empty
+[COVERED] getContent
+[COVERED] getContentKeys
+[COVERED] getContentMap
+[COVERED] getDataChildAt
+[COVERED] getMetaKeys
+[COVERED] getMetadata
+[COVERED] resetIntrinsicMeta
+[COVERED] importContent
+[COVERED] isEqualTo
+[COVERED] isEquivalentTo
+[COVERED] removeContent
+[COVERED] removeDataChild
+[COVERED] removeDataChildAt
+[COVERED] setContent
+[COVERED] setMetadata
+[COVERED] toSerialized
+[COVERED] walk
+[COVERED] getChildIndex
+[COVERED] fromSerialized
