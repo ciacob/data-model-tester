@@ -1,13 +1,7 @@
-get level
-get index
-get parentFlatElementsMap
-getElementByRoute
-hasContentKey
-toString
-enforceIndex
-reorderSiblings
-setIntrinsicMetadata
-setParent
+[COVERED] get level
+[COVERED] get index
+[COVERED] hasContentKey
+[COVERED] toString
 [COVERED] get numDataChildren
 [COVERED] get canHaveChildren
 [COVERED] get dataParent
@@ -24,7 +18,13 @@ setParent
 [COVERED] getDataChildAt
 [COVERED] getMetaKeys
 [COVERED] getMetadata
+[COVERED] enforceIndex
+[COVERED] reorderSiblings
 [COVERED] resetIntrinsicMeta
+[COVERED] setIntrinsicMetadata
+[COVERED] setParent
+[COVERED] getElementByRoute
+[COVERED] get parentFlatElementsMap
 [COVERED] importContent
 [COVERED] isEqualTo
 [COVERED] isEquivalentTo

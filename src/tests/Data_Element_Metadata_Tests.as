@@ -70,15 +70,15 @@ package tests {
             var child:DataElement = new DataElement();
             var grandchild:DataElement = new DataElement();
             element._children.push(child); // Manually add child
-            child.setParent(element);
+            child.setParent(element, false, false);
             child._children.push(grandchild); // Manually add grandchild
-            grandchild.setParent(child);
+            grandchild.setParent(child, false, false);
 
             // At this point, metadata is likely incorrect or empty
             Assert.assertNull("Child's route should be null initially", child.route);
             Assert.assertNull("Grandchild's route should be null initially", grandchild.route);
-            Assert.assertEquals("Child's level should be -1 initially", -1, child.level);
-            Assert.assertEquals("Grandchild's level should be -1 initially", -1, grandchild.level);
+            Assert.assertEquals("Child's level should be 0 initially", 0, child.level);
+            Assert.assertEquals("Grandchild's level should be 0 initially", 0, grandchild.level);
 
             // Call resetIntrinsicMeta to fix the metadata
             element.resetIntrinsicMeta();

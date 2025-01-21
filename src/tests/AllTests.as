@@ -13,5 +13,9 @@ package tests {
         public var test7:Data_Element_Serialization_Tests;
         public var test8:Data_Element_Equality_and_Equivalence_Tests;
         public var test9:Data_Element_Hierarchy_Navigation_Tests;
+        public var test10:Data_Element_Children_Relocation_Tests;
+        public var test11:Data_Element_Flat_Map_Tests;
+        public var test12:Data_Element_Parent_Tests;
+        public var test13:Data_Element_Misc_Tests;
     }
 }
