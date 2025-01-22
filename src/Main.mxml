@@ -10,16 +10,21 @@
             import org.flexunit.runner.FlexUnitCore;
             
             import tests.AllTests;
+            import flash.system.System;
+            import org.flexunit.runner.notification.Failure;
+            import org.flexunit.internals.TextListener;
             
             private var core:FlexUnitCore;
             
             protected function onApplicationComplete():void
             {
+                var traceListener: TraceListener = new TraceListener;
+
                 // Initialize FlexUnit
                 core = new FlexUnitCore();
             
                 // Add a TraceListener for logging test results
-                core.addListener(new TraceListener());
+                core.addListener(traceListener);
             
                 // Run all tests (point to the `AllTests` suite)
                 core.run(AllTests);
@@ -29,5 +34,7 @@
 
     <mx:Text fontSize="16" text="FlexUnit Test Runner - Output will appear in the console."
         verticalCenter="0" width="100%" textAlign="center"/>
+
+        
 
 </s:WindowedApplication>

@@ -37,7 +37,7 @@ package tests {
             Assert.assertEquals("Root level should be 0", 0, root.level);
             Assert.assertEquals("Child level should be 1", 1, child.level);
             Assert.assertEquals("GrandChild level should be 2", 2, grandChild.level);
-            Assert.assertEquals("Orphaned element level should be 0", 0, orphan.level);
+            Assert.assertEquals("Uninitialized orphan element level should be -1", -1, orphan.level);
         }
 
         // Test: get index
