@@ -1,4 +1,4 @@
-package tests {
+package tests.core {
     import flexunit.framework.Assert;
     import ro.ciacob.desktop.data.DataElement;
     import flash.utils.getQualifiedClassName;

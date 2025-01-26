@@ -1,9 +1,22 @@
 package tests {
     import org.flexunit.runners.Suite;
+    import tests.core.Data_Element_Children_Management_Test;
+    import tests.core.Data_Element_Edge_Case_Tests;
+    import tests.core.Data_Element_Cloning_Tests;
+    import tests.core.Data_Element_Constructor_Test;
+    import tests.core.Data_Element_Metadata_Tests;
+    import tests.core.Data_Element_Content_Tests;
+    import tests.core.Data_Element_Serialization_Tests;
+    import tests.core.Data_Element_Equality_and_Equivalence_Tests;
+    import tests.core.Data_Element_Hierarchy_Navigation_Tests;
+    import tests.core.Data_Element_Children_Relocation_Tests;
+    import tests.core.Data_Element_Flat_Map_Tests;
+    import tests.core.Data_Element_Parent_Tests;
+    import tests.core.Data_Element_Misc_Tests;
 
     [Suite]
     [RunWith("org.flexunit.runners.Suite")]
-    public class AllTests {
+    public class DataElementTests {
         public var test1:Data_Element_Edge_Case_Tests;
         public var test2:Data_Element_Cloning_Tests;
         public var test3:Data_Element_Constructor_Test;

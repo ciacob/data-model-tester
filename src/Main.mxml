@@ -8,11 +8,7 @@
         <![CDATA[
             import org.flexunit.internals.TraceListener;
             import org.flexunit.runner.FlexUnitCore;
-            
-            import tests.AllTests;
-            import flash.system.System;
-            import org.flexunit.runner.notification.Failure;
-            import org.flexunit.internals.TextListener;
+            import tests.SelectableDataElementTests;
             
             private var core:FlexUnitCore;
             
@@ -26,8 +22,12 @@
                 // Add a TraceListener for logging test results
                 core.addListener(traceListener);
             
-                // Run all tests (point to the `AllTests` suite)
-                core.run(AllTests);
+                // Run all test suites
+                // trace ('\n\n--- Test Suite: DataElementTests ---');
+                // core.run(DataElementTests);
+
+                trace ('\n\n--- Test Suite: SelectableDataElementTests ---');
+                core.run(SelectableDataElementTests);
             }
         ]]>
     </fx:Script>
